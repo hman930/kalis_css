@@ -1,0 +1,374 @@
+/* 전체 영역 */
+.wrap {
+    width: 800px;
+    margin: 40px auto;
+    background: #ffffff;
+}
+
+.wrap > *{
+   margin-bottom: 10px;
+} 
+/* ================= 상단 배너 ================= */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ================= 섹션 박스 ================= */
+.section-box {
+    background: #f7f9fa;
+    padding: 40px;
+    margin: 20px 10px;
+    border-radius: 10px;
+}
+
+/* 제목 */
+.section-header {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2f6f73;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+/* 서브 텍스트 */
+.section-sub {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.section-sub2 {
+    font-size: 16px;
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+
+.section-sub3 {
+    font-size: 14px;
+}
+
+.section-sub4 {
+    font-size: 12px;
+}
+
+
+/* 설명 텍스트 */
+.desc {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* ================= 표 ================= */
+.custom-table {
+    width: 100%;
+    border-collapse: separate;
+    /* 🔥 핵심 수정 */
+    border-spacing: 0;
+    /* 셀 간격 제거 */
+    font-size: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    /* 둥글게 */
+    overflow: hidden;
+    /* 밖으로 튀는 거 잘라줌 */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    font-size: 14px
+}
+
+/* 헤더 */
+.custom-table thead th {
+    background: #014099;
+    color: #fff;
+    padding: 10px;
+    border: 0.5px solid #ddd;
+}
+
+/* 바디 */
+.custom-table tbody td {
+    padding: 12px;
+    border: 0.5px solid #ddd;
+    text-align: center;
+    background-color: #ffffff;
+    font-size: 12px
+}
+
+
+
+.box {
+    position: relative;
+    border: 1.5px dotted #333;
+    padding: 20px 20px 15px 20px;
+    margin: 10px 0;
+    background: transparent;
+}
+
+.title {
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background: #f7f9fa;
+    /* 배경이 흰색일 때 */
+    padding: 0 4px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.title2 {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #014099;
+    /* 배경이 흰색일 때 */
+    padding: 4px 4px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* ===== ul (점 리스트 전용) ===== */
+.box ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+.box ul li {
+    position: relative;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.box ul li::before {
+    content: "•";
+    position: absolute;
+    left: -12px;
+    top: 2px;
+    font-size: 8px;
+    color: #555;
+}
+
+
+/* ===== 제목 ===== */
+.title2 {
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+
+/* ===== ol (숫자 리스트 전용) ===== */
+.box ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.box ol li {
+    font-size: 14px;
+    color: #000;
+    line-height: 1.5;
+}
+
+/* 숫자 스타일 */
+.box ol li::marker {
+    font-size: 14px;
+    color: #000;
+}
+
+/* ❗ 핵심: ol에는 커스텀 점 제거 */
+.box ol li::before {
+    content: none;
+}
+
+/* 👉 동그라미 숫자 전용 */
+.box ol.circle {
+    list-style: none;
+    /* 기존 숫자 제거 */
+    counter-reset: num;
+}
+
+.box ol.circle li {
+    counter-increment: num;
+    position: relative;
+    padding-left: 10px;
+}
+
+/* 동그라미 숫자 */
+.box ol.circle li::before {
+    content: counter(num);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 14px;
+    height: 16px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    font-size: 11px;
+    text-align: center;
+    line-height: 16px;
+}
+
+/* ================= 전형절차 ================= */
+.process {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+/* 카드 */
+.step {
+    width: 200px;
+    border: 1px solid #014099;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 상단 */
+.top {
+    background: #014099;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 8px 5px 8px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+/* 내용 */
+.body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.dot {
+    padding: 5px 2px 5px 2px;
+    border-bottom: 1px dotted #aaa;
+    text-align: center;
+    vertical-align: center;
+}
+
+/* 화살표 */
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    color: #014099;
+    width: 24px;
+}
+
+/* ================= 유의사항 ================= */
+.notice {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.notice div {
+    margin-bottom: 6px;
+}
+
+.icon-img {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('Paperlogy-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+/* 번호 강조 */
+.title-main {
+    font-family: 'Paperlogy';
+    font-weight: 700;
+    font-size: 30px;
+    color: #2f6f73;
+    margin-right: 10px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #014099, #2a6df5);
+    /* 그라데이션 */
+    color: #fff;
+
+    padding: 4px 6px 4px 8px;
+    /* 오른쪽 살짝 줄이기 */
+    border-radius: 999px;
+    /* 완전 pill 형태 */
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1;
+    /* 🔥 높이 틀어짐 방지 */
+
+    box-shadow: 0 2px 6px rgba(1, 64, 153, 0.3);
+    /* 부드러운 그림자 */
+}
+
+.badge2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: linear-gradient(90deg, #73D800, #014099);
+    /* 그라데이션 */
+    color: #fff;
+
+    padding: 4px 6px 4px 6px;
+    /* 오른쪽 살짝 줄이기 */
+    border-radius: 2px;
+    /* 완전 pill 형태 */
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1;
+    /* 🔥 높이 틀어짐 방지 */
+}
+
+.mini-box {
+    display: inline-flex;          /* 🔥 중앙정렬 핵심 */
+    align-items: center;
+    justify-content: center;
+
+    height: 18px;
+    padding: 0 6px;
+
+    border: 1px solid #333;
+    background: #FFF7CC;
+
+    font-size: 12px;
+    line-height: 1;
+
+    border-radius: 2px;            /* 살짝 둥글게 (선택) */
+}
