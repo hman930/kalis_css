@@ -303,7 +303,8 @@ tr, td, th{
 /* 카드 */
 
 .step{
-    width:200px;
+    flex:1;
+    min-width:160px;
 
     border:1px solid #014099;
     border-radius:6px;
