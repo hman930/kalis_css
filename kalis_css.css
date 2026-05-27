@@ -37,7 +37,7 @@ tr, td, th{
 /* 전체 영역 */
 .wrap{
     width:100%;
-    max-width:1200px;
+    max-width:800px;
     margin:40px auto;
     background:#ffffff;
 }
