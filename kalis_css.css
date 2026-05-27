@@ -36,7 +36,8 @@ tr, td, th{
 
 /* 전체 영역 */
 .wrap{
-    width:800px;
+    width:100%;
+    max-width:1200px;
     margin:40px auto;
     background:#ffffff;
 }
@@ -297,8 +298,8 @@ tr, td, th{
     display:flex;
     align-items:stretch;
     gap:8px;
+    flex-wrap:wrap;
 }
-
 /* 카드 */
 
 .step{
